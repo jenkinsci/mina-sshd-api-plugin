@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.jenkins-ci.plugins.mina-sshd-api</groupId>
+        <artifactId>mina-sshd-api-parent</artifactId>
+        <version>${revision}-${changelist}</version>
+    </parent>
+
+    <artifactId>mina-sshd-sftp-api</artifactId>
+    <version>${revision}-${changelist}</version>
+    <packaging>hpi</packaging>
+
+    <name>Mina SSHD API :: SFTP</name>
+    <description>
+        This plugin provides the Apache Mina SSHD SFTP library to plugins.
+    </description>
+    <url>https://github.com/jenkinsci/mina-sshd-api-plugin</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jenkins-ci.plugins.mina-sshd-api</groupId>
+            <artifactId>mina-sshd-core-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sshd</groupId>
+            <artifactId>sshd-sftp</artifactId>
+            <version>${revision}</version>
+            <exclusions>
+                <!-- Provided by dependencies -->
+                <exclusion>
+                    <groupId>org.apache.sshd</groupId>
+                    <artifactId>sshd-common</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.sshd</groupId>
+                    <artifactId>sshd-core</artifactId>
+                </exclusion>
+                <!-- Provided by Jenkins core -->
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>jcl-over-slf4j</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+</project>

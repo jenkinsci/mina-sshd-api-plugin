@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.jenkins-ci.plugins.mina-sshd-api</groupId>
+        <artifactId>mina-sshd-api-parent</artifactId>
+        <version>${revision}-${changelist}</version>
+    </parent>
+
+    <artifactId>mina-sshd-common-api</artifactId>
+    <version>${revision}-${changelist}</version>
+    <packaging>hpi</packaging>
+
+    <name>Mina SSHD API :: Common</name>
+    <description>
+        This plugin provides the Apache Mina SSHD Common library to plugins.
+    </description>
+    <url>https://github.com/jenkinsci/mina-sshd-api-plugin</url>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.sshd</groupId>
+            <artifactId>sshd-common</artifactId>
+            <version>${revision}</version>
+            <exclusions>
+                <!-- Provided by Jenkins core -->
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>jcl-over-slf4j</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+</project>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.jenkins-ci.plugins</groupId>
+        <artifactId>plugin</artifactId>
+        <version>4.40</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>org.jenkins-ci.plugins.mina-sshd-api</groupId>
+    <artifactId>mina-sshd-api-parent</artifactId>
+    <version>${revision}-${changelist}</version>
+    <packaging>pom</packaging>
+
+    <name>Mina SSHD API :: Parent</name>
+    <description>
+        This plugin provides the Apache Mina SSHD Core library to plugins.
+    </description>
+    <url>https://github.com/jenkinsci/mina-sshd-api-plugin</url>
+    
+    <licenses>
+        <license>
+            <name>The MIT license</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>allan_burdajewicz</id>
+            <name>Allan Burdajewicz</name>
+            <email>allan.burdajewicz@gmail.com</email>
+        </developer>
+    </developers>
+    
+    <scm>
+        <connection>scm:git:git://github.com/${gitHubRepo}.git</connection>
+        <developerConnection>scm:git:git@github.com:${gitHubRepo}.git</developerConnection>
+        <url>https://github.com/${gitHubRepo}</url>
+        <tag>${scmTag}</tag>
+    </scm>
+    
+    <properties>
+        <revision>2.8.0</revision>
+        <changelist>999999-SNAPSHOT</changelist>
+        <gitHubRepo>jenkinsci/mina-sshd-api-plugin</gitHubRepo>
+        <jenkins.version>2.289.1</jenkins.version>
+        <autoVersionSubmodules>true</autoVersionSubmodules>
+    </properties>
+    
+    <repositories>
+        <repository>
+            <id>repo.jenkins-ci.org</id>
+            <url>https://repo.jenkins-ci.org/public/</url>
+        </repository>
+    </repositories>
+    
+    <pluginRepositories>
+        <pluginRepository>
+            <id>repo.jenkins-ci.org</id>
+            <url>https://repo.jenkins-ci.org/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <modules>
+        <module>mina-sshd-common</module>
+        <module>mina-sshd-core</module>
+        <module>mina-sshd-scp</module>
+        <module>mina-sshd-sftp</module>
+    </modules>
+    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.jenkins.tools.bom</groupId>
+                <artifactId>bom-2.289.x</artifactId>
+                <version>1409.v7659b_c072f18</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
