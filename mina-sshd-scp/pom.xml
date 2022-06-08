@@ -11,7 +11,6 @@
     </parent>
 
     <artifactId>mina-sshd-scp-api</artifactId>
-    <version>${revision}-${changelist}</version>
     <packaging>hpi</packaging>
 
     <name>Mina SSHD API :: SCP</name>
