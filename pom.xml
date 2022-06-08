@@ -9,7 +9,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>org.jenkins-ci.plugins.mina-sshd-api</groupId>
+    <groupId>io.jenkins.plugins.mina-sshd-api</groupId>
     <artifactId>mina-sshd-api-parent</artifactId>
     <version>${revision}-${changelist}</version>
     <packaging>pom</packaging>
