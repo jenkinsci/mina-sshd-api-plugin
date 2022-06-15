@@ -10,7 +10,7 @@
         <version>${revision}-${changelist}</version>
     </parent>
 
-    <artifactId>mina-sshd-common-api</artifactId>
+    <artifactId>mina-sshd-api-common</artifactId>
     <packaging>hpi</packaging>
 
     <name>Mina SSHD API :: Common</name>
