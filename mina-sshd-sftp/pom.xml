@@ -10,7 +10,7 @@
         <version>${revision}-${changelist}</version>
     </parent>
 
-    <artifactId>mina-sshd-sftp-api</artifactId>
+    <artifactId>mina-sshd-api-sftp</artifactId>
     <packaging>hpi</packaging>
 
     <name>Mina SSHD API :: SFTP</name>
@@ -22,7 +22,7 @@
     <dependencies>
         <dependency>
             <groupId>io.jenkins.plugins.mina-sshd-api</groupId>
-            <artifactId>mina-sshd-core-api</artifactId>
+            <artifactId>mina-sshd-api-core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
