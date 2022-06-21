@@ -66,10 +66,10 @@
     </pluginRepositories>
 
     <modules>
-        <module>mina-sshd-common</module>
-        <module>mina-sshd-core</module>
-        <module>mina-sshd-scp</module>
-        <module>mina-sshd-sftp</module>
+        <module>mina-sshd-api-common</module>
+        <module>mina-sshd-api-core</module>
+        <module>mina-sshd-api-scp</module>
+        <module>mina-sshd-api-sftp</module>
     </modules>
     
     <dependencyManagement>
