@@ -47,9 +47,9 @@ Open a pull request in [jenkins-infra/repository-permissions-updater](https://gi
 
 Open a pull request on this repository:
 
-* Create a new directory `mina-sshd-<name>-api where `<name>` is the name of the SSHD module.
+* Create a new directory `mina-sshd-api-#MODULE_NAME`
 * Create `pom.xml`
-    * Add a dependency on `org.apache.sshd:sshd-<name>`.
+    * Add a dependency on `org.apache.sshd:sshd-#MODULE_NAME`.
 
         ```
         <dependency>
