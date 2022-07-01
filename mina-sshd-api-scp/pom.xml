@@ -23,7 +23,6 @@
         <dependency>
             <groupId>io.jenkins.plugins.mina-sshd-api</groupId>
             <artifactId>mina-sshd-api-core</artifactId>
-            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.sshd</groupId>
