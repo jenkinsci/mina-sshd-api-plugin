@@ -139,7 +139,7 @@ public class MinaSSHPublicKeyAuthenticator extends SSHAuthenticator<ClientSessio
                                                                                                 @NonNull U user,
                                                                                                 @CheckForNull String
                                                                                                     username) {
-            if (supports(connection.getClass(), user.getClass())) {
+            if (connection instanceof ClientSession && user instanceof SSHUserPrivateKey) {
                 return (SSHAuthenticator<C, U>) new MinaSSHPublicKeyAuthenticator(
                     (ClientSession) connection,
                     (SSHUserPrivateKey) user,

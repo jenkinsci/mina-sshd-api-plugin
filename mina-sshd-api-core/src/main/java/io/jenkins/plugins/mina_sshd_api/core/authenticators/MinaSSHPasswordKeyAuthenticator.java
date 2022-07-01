@@ -117,7 +117,7 @@ public class MinaSSHPasswordKeyAuthenticator
                                                                                                 @NonNull U user,
                                                                                                 @CheckForNull String
                                                                                                     username) {
-            if (supports(connection.getClass(), user.getClass())) {
+            if (connection instanceof ClientSession && user instanceof StandardUsernamePasswordCredentials) {
                 return (SSHAuthenticator<C, U>) new MinaSSHPasswordKeyAuthenticator((ClientSession) connection,
                     (StandardUsernamePasswordCredentials) user, username);
             }
