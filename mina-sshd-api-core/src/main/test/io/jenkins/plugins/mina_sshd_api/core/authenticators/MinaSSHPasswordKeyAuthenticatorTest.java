@@ -72,25 +72,6 @@ public class MinaSSHPasswordKeyAuthenticatorTest {
     }
 
     @Test
-    public void testAuthenticate() throws Exception {
-        try (SshClient sshClient = SshClient.setUpDefaultClient()) {
-            sshClient.start();
-            try (ClientSession connection = sshClient
-                .connect(user.getUsername(), sshd.getHost(), sshd.getPort())
-                .verify(15, TimeUnit.SECONDS)
-                .getClientSession()) {
-
-                MinaSSHPasswordKeyAuthenticator instance = 
-                    new MinaSSHPasswordKeyAuthenticator(connection, user, null);
-                assertThat(instance.getAuthenticationMode(), is(SSHAuthenticator.Mode.AFTER_CONNECT));
-                assertThat(instance.canAuthenticate(), is(true));
-                assertThat(instance.authenticate(TaskListener.NULL), is(true));
-                assertThat(instance.isAuthenticated(), is(true));
-            }
-        }
-    }
-
-    @Test
     public void testFactory() throws Exception {
         try (SshClient sshClient = SshClient.setUpDefaultClient()) {
             sshClient.start();
