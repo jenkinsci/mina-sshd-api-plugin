@@ -18,18 +18,6 @@
         This plugin provides the Apache Mina SSHD Core library to plugins.
     </description>
     <url>https://github.com/jenkinsci/mina-sshd-api-plugin</url>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>io.jenkins.tools.bom</groupId>
-                <artifactId>bom-2.289.x</artifactId>
-                <version>1461.vb_3c6de28f2b_a_</version>
-                <scope>import</scope>
-                <type>pom</type>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
     
     <dependencies>
         <dependency>
