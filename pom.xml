@@ -47,7 +47,7 @@
         <revision>2.8.0</revision>
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/mina-sshd-api-plugin</gitHubRepo>
-        <jenkins.version>2.289.3</jenkins.version>
+        <jenkins.version>2.346.1</jenkins.version>
         <autoVersionSubmodules>true</autoVersionSubmodules>
     </properties>
     
