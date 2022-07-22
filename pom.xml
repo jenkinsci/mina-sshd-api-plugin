@@ -19,7 +19,7 @@
         This plugin provides the Apache Mina SSHD Core library to plugins.
     </description>
     <url>https://github.com/jenkinsci/mina-sshd-api-plugin</url>
-    
+
     <licenses>
         <license>
             <name>The MIT license</name>
@@ -42,22 +42,22 @@
         <url>https://github.com/${gitHubRepo}</url>
         <tag>${scmTag}</tag>
     </scm>
-    
+
     <properties>
         <revision>2.8.0</revision>
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/mina-sshd-api-plugin</gitHubRepo>
-        <jenkins.version>2.289.3</jenkins.version>
+        <jenkins.version>2.319.3</jenkins.version>
         <autoVersionSubmodules>true</autoVersionSubmodules>
     </properties>
-    
+
     <repositories>
         <repository>
             <id>repo.jenkins-ci.org</id>
             <url>https://repo.jenkins-ci.org/public/</url>
         </repository>
     </repositories>
-    
+
     <pluginRepositories>
         <pluginRepository>
             <id>repo.jenkins-ci.org</id>
@@ -71,13 +71,13 @@
         <module>mina-sshd-api-scp</module>
         <module>mina-sshd-api-sftp</module>
     </modules>
-    
+
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
-                <artifactId>bom-2.289.x</artifactId>
-                <version>1466.v85a_616ea_b_87c</version>
+                <artifactId>bom-2.319.x</artifactId>
+                <version>1508.v4b_d09ff0e893</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
