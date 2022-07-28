@@ -44,7 +44,7 @@
     </scm>
 
     <properties>
-        <revision>2.8.0</revision>
+        <revision>2.9.0</revision>
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/mina-sshd-api-plugin</gitHubRepo>
         <jenkins.version>2.319.3</jenkins.version>
