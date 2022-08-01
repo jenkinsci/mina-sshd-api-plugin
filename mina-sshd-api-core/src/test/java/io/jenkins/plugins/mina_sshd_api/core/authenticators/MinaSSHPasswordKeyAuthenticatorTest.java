@@ -16,6 +16,7 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.jvnet.hudson.test.JenkinsRule;
+import org.jvnet.hudson.test.LoggerRule;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -32,6 +33,9 @@ public class MinaSSHPasswordKeyAuthenticatorTest {
 
     private SshServer sshd;
 
+    @Rule
+    public LoggerRule logger = new LoggerRule();
+    
     @Rule
     public JenkinsRule r = new JenkinsRule();
 
@@ -73,6 +77,7 @@ public class MinaSSHPasswordKeyAuthenticatorTest {
 
     @Test
     public void testFactory() throws Exception {
+        logger.record("org.apache.sshd", Level.ALL);
         try (SshClient sshClient = SshClient.setUpDefaultClient()) {
             sshClient.start();
             try (ClientSession connection = sshClient
