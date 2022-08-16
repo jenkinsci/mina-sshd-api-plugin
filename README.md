@@ -14,7 +14,7 @@ mvn clean verify
 
 The release is automated on Pull Request merge as per [this documentation](https://www.jenkins.io/doc/developer/publishing/releasing-cd/#releasing). To release the plugin, ask the maintainer(s) to merge a PR.
 
-[See the release page](https://github.com/jenkinsci/mina-ssh-api-plugin/releases)
+[See the release page](https://plugins.jenkins.io/mina-sshd-api-common/#releases)
 
 # Test local instance
 
