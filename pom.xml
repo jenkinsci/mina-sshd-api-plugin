@@ -68,6 +68,7 @@
     <modules>
         <module>mina-sshd-api-common</module>
         <module>mina-sshd-api-core</module>
+        <module>mina-sshd-api-osgi</module>
         <module>mina-sshd-api-scp</module>
         <module>mina-sshd-api-sftp</module>
     </modules>
