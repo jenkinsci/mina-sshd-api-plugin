@@ -47,7 +47,7 @@
         <revision>2.12.0</revision>
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/mina-sshd-api-plugin</gitHubRepo>
-        <jenkins.version>2.361.4</jenkins.version>
+        <jenkins.version>2.387.3</jenkins.version>
         <autoVersionSubmodules>true</autoVersionSubmodules>
     </properties>
 
@@ -76,8 +76,8 @@
         <dependencies>
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
-                <artifactId>bom-2.361.x</artifactId>
-                <version>2102.v854b_fec19c92</version>
+                <artifactId>bom-2.387.x</artifactId>
+                <version>2543.vfb_1a_5fb_9496d</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
