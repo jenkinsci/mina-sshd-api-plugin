@@ -47,7 +47,7 @@
         <revision>2.12.1</revision>
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/mina-sshd-api-plugin</gitHubRepo>
-        <jenkins.version>2.387.3</jenkins.version>
+        <jenkins.version>2.426.3</jenkins.version>
         <autoVersionSubmodules>true</autoVersionSubmodules>
     </properties>
 
@@ -76,10 +76,19 @@
         <dependencies>
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
-                <artifactId>bom-2.387.x</artifactId>
-                <version>2543.vfb_1a_5fb_9496d</version>
+                <artifactId>bom-2.426.x</artifactId>
+                <!-- 
+                     TODO remove the eddsa-api management below when the bom upadte includes eddsa-api
+                     https://github.com/jenkinsci/bom/pull/3230
+                -->
+                <version>3041.ve87ce2cdf223</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.jenkins.plugins</groupId>
+                <artifactId>eddsa-api</artifactId>
+                <version>0.3.0-4.v84c6f0f4969e</version>
             </dependency>
             <dependency>
                 <groupId>io.jenkins.plugins.mina-sshd-api</groupId>
@@ -90,12 +99,6 @@
                 <groupId>io.jenkins.plugins.mina-sshd-api</groupId>
                 <artifactId>mina-sshd-api-core</artifactId>
                 <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jenkins-ci.plugins</groupId>
-                <artifactId>ssh-credentials</artifactId>
-                <!-- we need a version which mark trilead-api as optional -->
-                <version>337.v395d2403ccd4</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
