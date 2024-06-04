@@ -50,10 +50,5 @@
             <artifactId>ssh-credentials</artifactId>
             <optional>true</optional>
         </dependency>
-        <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>trilead-api</artifactId>
-            <optional>true</optional>
-        </dependency>
     </dependencies>
 </project>
