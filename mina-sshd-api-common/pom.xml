@@ -46,6 +46,16 @@
             <artifactId>bouncycastle-api</artifactId>
             <optional>true</optional>
         </dependency>
-
+        <dependency>
+            <groupId>org.jenkins-ci.main</groupId>
+            <artifactId>jenkins-test-harness</artifactId>
+            <version>2270.v87a_0ea_b_54da_0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.jenkins.test.fips</groupId>
+            <artifactId>fips-bundle-test</artifactId>
+            <version>23.v76d4fd57f5b_d</version>
+        </dependency>
     </dependencies>
 </project>
