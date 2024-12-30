@@ -50,7 +50,7 @@
         <dependency>
             <groupId>org.jenkins-ci.main</groupId>
             <artifactId>jenkins-test-harness</artifactId>
-            <version>2270.v87a_0ea_b_54da_0</version>
+            <version>2370.vfb_b_0c547a_659</version>
             <scope>test</scope>
         </dependency>
         <dependency>
