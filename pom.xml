@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>4.86</version>
+        <version>5.8</version>
         <relativePath/>
     </parent>
 
@@ -48,8 +48,8 @@
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/mina-sshd-api-plugin</gitHubRepo>
         <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
-        <jenkins.baseline>2.426</jenkins.baseline>
-        <jenkins.version>${jenkins.baseline}.3</jenkins.version>
+        <jenkins.baseline>2.479</jenkins.baseline>
+        <jenkins.version>${jenkins.baseline}.1</jenkins.version>
         <autoVersionSubmodules>true</autoVersionSubmodules>
         <!-- TODO remove once offered by parent -->
         <jenkins-test-harness.version>2270.v87a_0ea_b_54da_0</jenkins-test-harness.version>
@@ -81,7 +81,7 @@
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
                 <artifactId>bom-${jenkins.baseline}.x</artifactId>
-                <version>3208.vb_21177d4b_cd9</version>
+                <version>4051.v78dce3ce8b_d6</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
