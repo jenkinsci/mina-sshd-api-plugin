@@ -51,8 +51,6 @@
         <jenkins.baseline>2.479</jenkins.baseline>
         <jenkins.version>${jenkins.baseline}.1</jenkins.version>
         <autoVersionSubmodules>true</autoVersionSubmodules>
-        <!-- TODO remove once offered by parent -->
-        <jenkins-test-harness.version>2270.v87a_0ea_b_54da_0</jenkins-test-harness.version>
     </properties>
 
     <repositories>
