@@ -44,7 +44,7 @@
     </scm>
 
     <properties>
-        <revision>2.14.0</revision>
+        <revision>2.15.0</revision>
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/mina-sshd-api-plugin</gitHubRepo>
         <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
