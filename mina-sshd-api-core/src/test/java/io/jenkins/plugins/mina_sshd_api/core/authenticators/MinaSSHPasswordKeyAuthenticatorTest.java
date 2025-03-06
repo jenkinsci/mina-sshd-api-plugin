@@ -32,11 +32,10 @@ public class MinaSSHPasswordKeyAuthenticatorTest {
 
     private SshServer sshd;
 
+    private StandardUsernamePasswordCredentials user;
+
     @Rule
     public JenkinsRule r = new JenkinsRule();
-
-    private final StandardUsernamePasswordCredentials user =
-        new UsernamePasswordCredentialsImpl(CredentialsScope.SYSTEM, null, "foobar", "foobar", "foomanchu");
 
     @After
     public void tearDown() {
@@ -50,7 +49,8 @@ public class MinaSSHPasswordKeyAuthenticatorTest {
     }
 
     @Before
-    public void setUp() throws IOException {
+    public void setUp() throws Exception {
+        user = new UsernamePasswordCredentialsImpl(CredentialsScope.SYSTEM, null, "foobar", "foobar", "foomanchu");
         sshd = SshServer.setUpDefaultServer();
         sshd.setHost("localhost");
         sshd.setPort(0);
@@ -80,7 +80,7 @@ public class MinaSSHPasswordKeyAuthenticatorTest {
                 .verify(30, TimeUnit.SECONDS)
                 .getClientSession()) {
 
-                SSHAuthenticator<Object, StandardUsernameCredentials> instance = 
+                SSHAuthenticator<Object, StandardUsernameCredentials> instance =
                     SSHAuthenticator.newInstance(connection, user);
                 assertThat(instance.getAuthenticationMode(), is(SSHAuthenticator.Mode.AFTER_CONNECT));
                 assertThat(instance.canAuthenticate(), is(true));
