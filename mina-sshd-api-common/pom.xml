@@ -18,7 +18,12 @@
         This plugin provides the Apache Mina SSHD Common library to plugins.
     </description>
     <url>https://github.com/jenkinsci/mina-sshd-api-plugin</url>
-    
+
+    <properties>
+        <hpi.bundledArtifacts>sshd-common</hpi.bundledArtifacts>
+        <hpi.strictBundledArtifacts>true</hpi.strictBundledArtifacts>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.sshd</groupId>
