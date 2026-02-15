@@ -93,6 +93,12 @@
                 <artifactId>mina-sshd-api-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <!-- TODO: Remove when https://github.com/jenkinsci/jenkins-test-harness/pull/1152 merged and released -->
+            <dependency>
+              <groupId>io.jenkins.test.fips</groupId>
+              <artifactId>fips-bundle-test</artifactId>
+              <version>31.va_249066133ed</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

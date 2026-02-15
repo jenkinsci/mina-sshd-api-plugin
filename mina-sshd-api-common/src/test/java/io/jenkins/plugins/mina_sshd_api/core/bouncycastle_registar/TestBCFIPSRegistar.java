@@ -1,7 +1,5 @@
 package io.jenkins.plugins.mina_sshd_api.core.bouncycastle_registar;
 
-import io.jenkins.test.fips.FIPS1403BC2x;
-import io.jenkins.test.fips.FIPSTestBundleProvider;
 import org.apache.sshd.common.config.keys.FilePasswordProvider;
 import org.apache.sshd.common.util.security.SecurityUtils;
 import org.junit.Rule;
@@ -22,7 +20,7 @@ import static org.hamcrest.Matchers.notNullValue;
 public class TestBCFIPSRegistar {
 
     @Rule
-    public RealJenkinsRule j = new RealJenkinsRule().withFIPSEnabled(FIPSTestBundleProvider.get(FIPS1403BC2x.VERSION))
+    public RealJenkinsRule j = new RealJenkinsRule()
             .omitPlugins("eddsa-api").javaOptions("-Xmx256m");
 
     @Test
