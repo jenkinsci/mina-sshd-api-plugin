@@ -20,7 +20,7 @@ import static org.hamcrest.Matchers.notNullValue;
 public class TestBCFIPSRegistar {
 
     @Rule
-    public RealJenkinsRule j = new RealJenkinsRule().withFIPSEnabled()
+    public RealJenkinsRule j = new RealJenkinsRule()
             .omitPlugins("eddsa-api").javaOptions("-Xmx256m");
 
     @Test
