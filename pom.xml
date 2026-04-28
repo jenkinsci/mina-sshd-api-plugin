@@ -44,7 +44,7 @@
     </scm>
 
     <properties>
-        <revision>2.16.0</revision>
+        <revision>2.17.1</revision>
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/mina-sshd-api-plugin</gitHubRepo>
         <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
@@ -92,6 +92,12 @@
                 <groupId>io.jenkins.plugins.mina-sshd-api</groupId>
                 <artifactId>mina-sshd-api-core</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <!-- TODO: Remove when https://github.com/jenkinsci/jenkins-test-harness/pull/1152 merged and released -->
+            <dependency>
+              <groupId>io.jenkins.test.fips</groupId>
+              <artifactId>fips-bundle-test</artifactId>
+              <version>31.va_249066133ed</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
